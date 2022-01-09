@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext } from "react";
+import "./App.css";
+// import ConA from "./Components/ConA";
+import ConA from "./Components/Pokemon/ConA";
+// import Effcet from "./Components/Effcet";
+
+
+const FirstName = createContext();
+const LastName = createContext();
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <FirstName.Provider value={"Md Hafijul"}>
+        <LastName.Provider value={"Islam"}>
+          <ConA />
+        </LastName.Provider>
+      </FirstName.Provider> */}
+      {/* <Effcet /> */}
+      <ConA />
     </div>
   );
 }
 
 export default App;
+export { FirstName, LastName };
